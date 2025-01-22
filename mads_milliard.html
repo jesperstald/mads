@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Spending Scale</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .pie-container {
+            width: 400px;
+            height: 400px;
+            margin: 40px auto;
+            position: relative;
+        }
+        
+        .pie {
+            width: 100%;
+            height: 100%;
+        }
+        
+        ul {
+            line-height: 1.6;
+        }
+        
+        li {
+            margin-bottom: 15px;
+        }
+        
+        .amount {
+            font-weight: bold;
+            color: #2c5282;
+        }
+        
+        .legend {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mads' Milliarder</h1>
+    <p>Årlige stats-udgifter Mads har nævnt:</p>
+    <ul>
+        <li><span class="amount">20 million DKK</span> - Kultur-klippekort for unge</li>
+        <li><span class="amount">20 million DKK</span> - lex.dk</li>
+    </ul>
+
+    <div class="pie-container">
+        <svg class="pie" viewBox="0 0 32 32">
+            <!-- Base circle (remaining amount) -->
+            <circle cx="16" cy="16" r="16" fill="#f0f0f0"/>
+            <circle cx="16" cy="16" r="8" fill="transparent" 
+                stroke="#4CAF50" 
+                stroke-width="16"
+                stroke-dasharray="calc(0.13793103 * 50.24 / 100) 50.24"
+                transform="rotate(-90) translate(-32)"/>
+            <!-- Initiatives (starting from 12 o'clock, going clockwise) -->
+            <!-- <circle cx="16" cy="16" r="16" fill="#4CAF50" /> -->
+        </svg>
+    </div>
+    
+
+    <div class="legend">
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: #4CAF50"></div>
+            <span>Mads' punkter: 40 Mio (0,14%)</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: #f0f0f0"></div>
+            <span>Mink-erstatning: 29500 Mio (99,86%)</span>
+        </div>
+    </div>
+    
+
+</body>
+</html>
